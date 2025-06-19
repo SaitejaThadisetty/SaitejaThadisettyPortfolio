@@ -39,7 +39,7 @@ const HomeSection: React.FC = () => {
   }, [displayed, typing, deleting, roleIndex]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 relative overflow-hidden pb-24 md:pb-32">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 relative overflow-hidden pb-24 md:pb-32 pt-40">
       <div className="absolute inset-0 pointer-events-none">
         <div className="w-full h-full bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20 animate-gradient-move" />
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-tr from-pink-400/30 via-indigo-400/20 to-purple-400/30 rounded-full blur-3xl animate-pulse-slow" />
@@ -75,7 +75,7 @@ const HomeSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-pink-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2"
+          className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-pink-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2 pb-4"
         >
           Hi, I'm Saiteja Thadisetty
         </motion.h1>
