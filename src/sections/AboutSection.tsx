@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const AboutSection: React.FC = () => (
-  <section id="about" className="min-h-[60vh] flex items-center justify-center bg-gray-900 text-white px-4 md:px-8">
+  <section id="about" className="min-h-[60vh] flex items-center justify-center bg-gray-900 text-white px-4 md:px-8" >
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
