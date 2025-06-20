@@ -9,6 +9,7 @@ const points = [
   'Built Selenium automation framework (reduced testing by 90%)',
   'Developed smart meter dashboards using React.js, Spring Boot, PostgreSQL',
   'Used Kubernetes observability tools for protocol debugging',
+  'Received the "Bravo Award" for being recognized as the Best Employee of the Business Group, honoring exceptional contributions to the design and development of the automation framework',
 ];
 
 const ExperienceSection: React.FC = () => (
