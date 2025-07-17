@@ -37,7 +37,7 @@ public/images/   # Project and profile images
 ---
 
 ## 🖥️ Demo
-> _Add your live site link here, e.g. [portfolio.example.com](https://portfolio.example.com)_
+>  [SaitejaThadisettyPortfolio](https://saiteja-thadisetty-portfolio.vercel.app/#home)_
 
 ---
 
