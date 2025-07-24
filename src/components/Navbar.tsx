@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { FiDownload } from 'react-icons/fi';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -39,7 +40,7 @@ const Navbar: React.FC = () => {
           Saiteja Thadisetty.
         </motion.a>
         {/* Desktop nav */}
-        <ul className="hidden md:flex gap-6 text-lg font-medium">
+        <ul className="hidden md:flex gap-6 text-lg font-medium items-center">
           {navLinks.map((link) => (
             <motion.li
               key={link.name}
@@ -51,6 +52,20 @@ const Navbar: React.FC = () => {
               </a>
             </motion.li>
           ))}
+          <motion.li
+            whileHover={{ scale: 1.05 }}
+            className="transition-transform duration-200"
+          >
+            <a 
+              href="https://drive.google.com/file/d/1LeFs1aGyxtPKUYH2qc6jkd0fwrZ_1fEu/view?usp=drive_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-4 py-1.5 rounded-full hover:shadow-lg transition-shadow duration-300"
+            >
+              <FiDownload className="text-sm" />
+              <span>Resume</span>
+            </a>
+          </motion.li>
         </ul>
         {/* Mobile menu button */}
         <button
@@ -80,6 +95,16 @@ const Navbar: React.FC = () => {
                   {link.name}
                 </a>
               ))}
+              <a
+                href="https://drive.google.com/your-resume-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow duration-300 mt-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                <FiDownload className="text-sm" />
+                <span>Resume</span>
+              </a>
             </motion.div>
           )}
         </AnimatePresence>
