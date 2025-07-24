@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
               <a
-                href="https://drive.google.com/your-resume-link"
+                href="https://drive.google.com/file/d/1LeFs1aGyxtPKUYH2qc6jkd0fwrZ_1fEu/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow duration-300 mt-2"
