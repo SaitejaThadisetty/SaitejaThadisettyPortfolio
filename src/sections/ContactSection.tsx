@@ -15,7 +15,7 @@ const ContactSection: React.FC = () => {
       const form = e.currentTarget;
       const formData = new FormData(form);
       
-      const response = await fetch('https://formsubmit.co/thadisetty.saiteja@gmail.com', {
+      const response = await fetch('https://formsubmit.co/thadishetty.saiteja@gmail.com', {
         method: 'POST',
         body: formData,
         headers: {
