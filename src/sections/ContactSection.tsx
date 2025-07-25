@@ -1,37 +1,34 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
+import emailjs from '@emailjs/browser';
 
 const ContactSection: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   
+  const form = useRef<HTMLFormElement>(null);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus('submitting');
     
     try {
-      const form = e.currentTarget;
-      const formData = new FormData(form);
+      if (!form.current) return;
+
+      await emailjs.sendForm(
+        'service_wsmd52r', // Replace with your EmailJS service ID
+        'template_ykiu3qc', // Replace with your EmailJS template ID
+        form.current,
+        'ELImwzjfwArH-upxJ' // Replace with your EmailJS public key
+      );
       
-      const response = await fetch('https://formsubmit.co/thadisetty.saiteja@gmail.com', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
-      });
-      
-      if (response.ok) {
-        // Form submitted successfully
-        setFormStatus('success');
-        form.reset();
-      } else {
-        // Form submission failed
-        setFormStatus('error');
-      }
+      // Form submitted successfully
+      setFormStatus('success');
+      form.current.reset();
     } catch (error) {
+      console.error('Error sending email:', error);
       setFormStatus('error');
     }
   };
@@ -41,6 +38,7 @@ const ContactSection: React.FC = () => {
     <div className="max-w-xl w-full text-center py-8 md:py-12">
       <h2 className="text-3xl font-bold mb-8 mt-4">Contact</h2>
       <motion.form
+        ref={form}
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
