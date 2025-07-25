@@ -1,9 +1,42 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
 
-const ContactSection: React.FC = () => (
+const ContactSection: React.FC = () => {
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormStatus('submitting');
+    
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      
+      const response = await fetch('https://formsubmit.co/thadisetty.saiteja@gmail.com', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+      
+      if (response.ok) {
+        // Form submitted successfully
+        setFormStatus('success');
+        form.reset();
+      } else {
+        // Form submission failed
+        setFormStatus('error');
+      }
+    } catch (error) {
+      setFormStatus('error');
+    }
+  };
+  
+  return (
   <section id="contact" className="min-h-[50vh] flex items-center justify-center bg-gradient-to-r from-indigo-900 to-purple-900 text-white px-4 md:px-8">
     <div className="max-w-xl w-full text-center py-8 md:py-12">
       <h2 className="text-3xl font-bold mb-8 mt-4">Contact</h2>
@@ -13,12 +46,31 @@ const ContactSection: React.FC = () => (
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8 }}
         className="flex flex-col gap-4 mb-6"
-        onSubmit={e => e.preventDefault()}
+        onSubmit={handleSubmit}
       >
-        <input type="text" placeholder="Name" className="p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
-        <input type="email" placeholder="Email" className="p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
-        <textarea placeholder="Message" className="p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" rows={4} required />
-        <button type="submit" className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded font-semibold hover:scale-105 transition-transform">Send</button>
+        <input type="text" name="name" placeholder="Name" className="p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" required disabled={formStatus === 'submitting'} />
+        <input type="email" name="email" placeholder="Email" className="p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" required disabled={formStatus === 'submitting'} />
+        <textarea name="message" placeholder="Message" className="p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" rows={4} required disabled={formStatus === 'submitting'} />
+        
+        {formStatus === 'success' && (
+          <div className="bg-green-900/50 border border-green-500 text-green-100 p-3 rounded flex items-center gap-2">
+            <FiCheckCircle /> Message sent successfully! I'll get back to you soon.
+          </div>
+        )}
+        
+        {formStatus === 'error' && (
+          <div className="bg-red-900/50 border border-red-500 text-red-100 p-3 rounded flex items-center gap-2">
+            <FiAlertCircle /> Failed to send message. Please try again later.
+          </div>
+        )}
+        
+        <button 
+          type="submit" 
+          className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded font-semibold hover:scale-105 transition-transform flex justify-center items-center"
+          disabled={formStatus === 'submitting'}
+        >
+          {formStatus === 'submitting' ? 'Sending...' : 'Send'}
+        </button>
       </motion.form>
       <div className="mb-2 text-indigo-300">thadisetty.saiteja@gmail.com</div>
       <div className="flex justify-center gap-6 mt-6 mb-2">
@@ -31,6 +83,7 @@ const ContactSection: React.FC = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
-export default ContactSection; 
+export default ContactSection;
