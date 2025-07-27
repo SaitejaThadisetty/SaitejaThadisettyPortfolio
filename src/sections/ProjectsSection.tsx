@@ -46,6 +46,16 @@ const projects = [
     github: 'https://github.com/SaitejaThadisetty/SaitejaThadisettyPortfolio',
     demo: 'https://saiteja-thadisetty-portfolio.vercel.app/',
   },
+
+  {
+    name: 'Financial Data Filtering App',
+    desc: 'A responsive web app that displays, filters, and sorts financial data for Apple Inc. using the Financial Modeling Prep API. Features dark/light modes, date and value filters, and sorting options for key financial metrics.',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Financial Modeling Prep API'],
+    img: 'https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg',
+    github: 'https://github.com/SaitejaThadisetty/Financial-Data-Filtering-Application',
+    demo: 'https://financial-data-filtering-application.vercel.app/',
+  },
+  
 ];
 
 const ProjectsSection: React.FC = () => {
