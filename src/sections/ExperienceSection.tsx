@@ -13,7 +13,7 @@ const points = [
 ];
 
 const ExperienceSection: React.FC = () => (
-  <section id="experience" className="min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white px-4 md:px-8">
+  <section id="experience" className="min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 text-white px-4 md:px-8">
     <div className="max-w-3xl w-full text-center pt-8 md:pt-12">
       <h2 className="text-3xl font-bold mb-8">Experience</h2>
       <motion.div
@@ -26,7 +26,7 @@ const ExperienceSection: React.FC = () => (
         <img src={honeywellLogo} alt="Honeywell" className="w-44 h-16 object-contain mb-4 md:mb-0 bg-white rounded-lg p-2" />
         <div className="flex-1 text-left">
           <h3 className="text-xl font-semibold mb-1">Embedded Software Engineer Intern</h3>
-          <span className="text-sm text-indigo-300 mb-2 block">Honeywell Technology Solutions</span>
+          <span className="text-sm text-slate-300 mb-2 block">Honeywell Technology Solutions</span>
           <span className="text-xs text-gray-400 mb-4 block">Jan 2024 - Jul 2024</span>
           <ul className="list-disc ml-5 space-y-2">
             {points.map((point, i) => (

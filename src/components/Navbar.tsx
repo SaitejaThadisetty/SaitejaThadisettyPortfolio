@@ -44,10 +44,10 @@ const Navbar: React.FC = () => {
           {navLinks.map((link) => (
             <motion.li
               key={link.name}
-              whileHover={{ scale: 1.1, color: '#a78bfa' }}
+              whileHover={{ scale: 1.1, color: '#94a3b8' }}
               className="transition-colors duration-200"
             >
-              <a href={link.href} className="hover:text-indigo-400 transition-colors duration-200">
+              <a href={link.href} className="hover:text-slate-400 transition-colors duration-200">
                 {link.name}
               </a>
             </motion.li>
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
               href="https://drive.google.com/file/d/1LeFs1aGyxtPKUYH2qc6jkd0fwrZ_1fEu/view?usp=drive_link" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-4 py-1.5 rounded-full hover:shadow-lg transition-shadow duration-300"
+              className="flex items-center gap-2 bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 text-white px-4 py-1.5 rounded-full hover:shadow-lg transition-shadow duration-300"
             >
               <FiDownload className="text-sm" />
               <span>Resume</span>
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
         </ul>
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-3xl text-indigo-300 focus:outline-none z-50"
+          className="md:hidden text-3xl text-slate-300 focus:outline-none z-50"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           onClick={() => setMenuOpen((v) => !v)}
         >
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-xl font-semibold text-indigo-100 hover:text-indigo-400 transition-colors duration-200"
+                  className="text-xl font-semibold text-slate-100 hover:text-slate-400 transition-colors duration-200"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.name}
@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
                 href="https://drive.google.com/file/d/1LeFs1aGyxtPKUYH2qc6jkd0fwrZ_1fEu/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow duration-300 mt-2"
+                className="flex items-center gap-2 bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow duration-300 mt-2"
                 onClick={() => setMenuOpen(false)}
               >
                 <FiDownload className="text-sm" />

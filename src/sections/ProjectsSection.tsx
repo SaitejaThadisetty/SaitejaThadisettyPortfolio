@@ -85,7 +85,7 @@ const ProjectsSection: React.FC = () => {
   );
 
   return (
-    <section id="projects" className="min-h-[60vh] flex items-center justify-center bg-gradient-to-r from-indigo-900 to-purple-900 text-white px-4 md:px-8">
+    <section id="projects" className="min-h-[60vh] flex items-center justify-center bg-gradient-to-r from-slate-800 to-slate-900 text-white px-4 md:px-8">
       <div className="max-w-6xl w-full text-center py-8 md:py-12">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -190,7 +190,7 @@ const ProjectsSection: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.3 + techIndex * 0.1 }}
-                        className="bg-indigo-600/70 text-xs px-3 py-1 rounded-full text-white backdrop-blur-sm"
+                        className="bg-slate-600/70 text-xs px-3 py-1 rounded-full text-white backdrop-blur-sm"
                       >
                         {tech}
                       </motion.span>
