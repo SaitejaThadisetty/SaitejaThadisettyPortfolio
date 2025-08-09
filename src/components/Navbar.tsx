@@ -28,14 +28,14 @@ const Navbar: React.FC = () => {
   }, [menuOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-opacity-80 backdrop-blur-md bg-gradient-to-r from-gray-900/80 to-gray-800/80 shadow-lg">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-slate-900/20 border-b border-slate-700/30">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         <motion.a
           href="#home"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
-          className="text-2xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent cursor-pointer select-none hover:scale-105 transition-transform duration-300"
+          className="text-2xl font-extrabold bg-gradient-to-r from-slate-200 via-slate-300 to-slate-400 bg-clip-text text-transparent cursor-pointer select-none hover:scale-105 transition-transform duration-300"
         >
           Saiteja Thadisetty.
         </motion.a>
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
               whileHover={{ scale: 1.1, color: '#94a3b8' }}
               className="transition-colors duration-200"
             >
-              <a href={link.href} className="hover:text-slate-400 transition-colors duration-200">
+              <a href={link.href} className="text-slate-200 hover:text-slate-300 transition-colors duration-200">
                 {link.name}
               </a>
             </motion.li>
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className="fixed top-0 right-0 w-3/4 max-w-xs h-full bg-gray-900/95 shadow-2xl flex flex-col items-center pt-24 gap-8 md:hidden z-40"
+              className="fixed top-0 right-0 w-3/4 max-w-xs h-full bg-slate-900/80 backdrop-blur-md border-l border-slate-700/30 shadow-2xl flex flex-col items-center pt-24 gap-8 md:hidden z-40"
             >
               {navLinks.map((link) => (
                 <a
