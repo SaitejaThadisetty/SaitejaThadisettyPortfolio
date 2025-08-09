@@ -39,11 +39,11 @@ const HomeSection: React.FC = () => {
   }, [displayed, typing, deleting, roleIndex]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 relative overflow-hidden pb-24 md:pb-32 pt-40">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pb-24 md:pb-32 pt-40">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="w-full h-full bg-gradient-to-br from-slate-600/10 via-slate-700/10 to-slate-800/10 animate-gradient-move" />
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-tr from-slate-600/20 via-slate-700/15 to-slate-800/20 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-10 right-1/4 w-60 h-60 bg-gradient-to-tr from-slate-700/15 via-slate-600/15 to-slate-800/20 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="w-full h-full bg-gradient-to-br from-slate-600/5 via-slate-700/5 to-slate-800/5 animate-gradient-move" />
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-tr from-slate-600/10 via-slate-700/8 to-slate-800/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-10 right-1/4 w-60 h-60 bg-gradient-to-tr from-slate-700/8 via-slate-600/8 to-slate-800/10 rounded-full blur-3xl animate-pulse-slow" />
       </div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}

@@ -13,7 +13,7 @@ const points = [
 ];
 
 const ExperienceSection: React.FC = () => (
-  <section id="experience" className="min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 text-white px-4 md:px-8">
+  <section id="experience" className="min-h-[60vh] flex items-center justify-center text-white px-4 md:px-8">
     <div className="max-w-3xl w-full text-center pt-8 md:pt-12">
       <h2 className="text-3xl font-bold mb-8">Experience</h2>
       <motion.div
@@ -21,7 +21,7 @@ const ExperienceSection: React.FC = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8 }}
-        className="bg-white/10 border border-white/20 rounded-2xl shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 mb-12"
+        className="backdrop-blur-md bg-slate-800/30 border border-slate-600/30 rounded-2xl shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 mb-12"
       >
         <img src={honeywellLogo} alt="Honeywell" className="w-44 h-16 object-contain mb-4 md:mb-0 bg-white rounded-lg p-2" />
         <div className="flex-1 text-left">

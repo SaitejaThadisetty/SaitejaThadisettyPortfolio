@@ -85,7 +85,7 @@ const ProjectsSection: React.FC = () => {
   );
 
   return (
-    <section id="projects" className="min-h-[60vh] flex items-center justify-center bg-gradient-to-r from-slate-800 to-slate-900 text-white px-4 md:px-8">
+    <section id="projects" className="min-h-[60vh] flex items-center justify-center text-white px-4 md:px-8">
       <div className="max-w-6xl w-full text-center py-8 md:py-12">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ const ProjectsSection: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-3 hover:bg-white/20 transition-all duration-300"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-full p-3 hover:bg-slate-700/60 transition-all duration-300"
             aria-label="Previous projects"
           >
             <FiChevronLeft size={24} />
@@ -114,7 +114,7 @@ const ProjectsSection: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-3 hover:bg-white/20 transition-all duration-300"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-full p-3 hover:bg-slate-700/60 transition-all duration-300"
             aria-label="Next projects"
           >
             <FiChevronRight size={24} />
@@ -138,7 +138,7 @@ const ProjectsSection: React.FC = () => {
                     y: -10,
                     transition: { duration: 0.3 }
                   }}
-                  className="bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col items-center backdrop-blur-sm hover:bg-white/15 transition-all duration-300"
+                  className="bg-slate-800/30 border border-slate-600/30 rounded-2xl shadow-xl p-6 flex flex-col items-center backdrop-blur-sm hover:bg-slate-700/40 transition-all duration-300"
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
