@@ -24,6 +24,16 @@ html, body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Hide Scrollbar */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Edge */
+}
+
+
 body {
   background: #0f172a;
   color: var(--foreground);

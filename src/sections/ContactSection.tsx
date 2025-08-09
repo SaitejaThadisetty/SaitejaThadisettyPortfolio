@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
 import emailjs from '@emailjs/browser';
 
@@ -71,14 +70,6 @@ const ContactSection: React.FC = () => {
         </button>
       </motion.form>
       <div className="mb-2 text-slate-300">thadisetty.saiteja@gmail.com</div>
-      <div className="flex justify-center gap-6 mt-6 mb-2">
-        <a href="https://github.com/SaitejaThadisetty" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform">
-          <FaGithub size={28} />
-        </a>
-        <a href="https://linkedin.com/in/saitejat27" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform">
-          <FaLinkedin size={28} />
-        </a>
-      </div>
     </div>
   </section>
   );

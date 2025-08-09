@@ -46,6 +46,7 @@ const HomeSection: React.FC = () => {
         <div className="absolute bottom-10 right-1/4 w-60 h-60 bg-gradient-to-tr from-slate-700/8 via-slate-600/8 to-slate-800/10 rounded-full blur-3xl animate-pulse-slow" />
       </div>
       <motion.div
+      
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}

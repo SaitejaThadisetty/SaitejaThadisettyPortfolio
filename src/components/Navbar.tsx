@@ -15,6 +15,18 @@ const navLinks = [
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // Add blur when scrolled past 100px (past home section)
+      setIsScrolled(scrollPosition > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   React.useEffect(() => {
     if (menuOpen) {
@@ -28,7 +40,11 @@ const Navbar: React.FC = () => {
   }, [menuOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-slate-900/20 border-b border-slate-700/30">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'backdrop-blur-md bg-slate-900/20' 
+        : ''
+    }`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         <motion.a
           href="#home"
