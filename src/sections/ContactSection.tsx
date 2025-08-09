@@ -35,7 +35,7 @@ const ContactSection: React.FC = () => {
   
   return (
   <section id="contact" className="min-h-[50vh] flex items-center justify-center text-white px-4 md:px-8">
-    <div className="max-w-xl w-full text-center py-8 md:py-12">
+    <div className="max-w-xl w-full text-center">
       <h2 className="text-3xl font-bold mb-8 mt-4">Contact</h2>
       <motion.form
         ref={form}

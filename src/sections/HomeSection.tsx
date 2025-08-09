@@ -39,7 +39,7 @@ const HomeSection: React.FC = () => {
   }, [displayed, typing, deleting, roleIndex]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pb-24 md:pb-32 pt-40">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-40">
       <div className="absolute inset-0 pointer-events-none">
         <div className="w-full h-full bg-gradient-to-br from-slate-600/5 via-slate-700/5 to-slate-800/5 animate-gradient-move" />
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-tr from-slate-600/10 via-slate-700/8 to-slate-800/10 rounded-full blur-3xl animate-pulse-slow" />

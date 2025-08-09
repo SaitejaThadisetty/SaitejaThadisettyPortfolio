@@ -86,7 +86,7 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <section id="projects" className="min-h-[60vh] flex items-center justify-center text-white px-4 md:px-8">
-      <div className="max-w-6xl w-full text-center py-8 md:py-12">
+      <div className="max-w-6xl w-full text-center">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

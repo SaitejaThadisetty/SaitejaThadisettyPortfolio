@@ -14,7 +14,7 @@ const points = [
 
 const ExperienceSection: React.FC = () => (
   <section id="experience" className="min-h-[60vh] flex items-center justify-center text-white px-4 md:px-8">
-    <div className="max-w-3xl w-full text-center pt-8 md:pt-12">
+    <div className="max-w-3xl w-full text-center">
       <h2 className="text-3xl font-bold mb-8">Experience</h2>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
