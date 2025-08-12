@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const [show, setShow] = React.useState(false);
@@ -48,6 +48,14 @@ const Footer: React.FC = () => {
             className="hover:scale-125 transition-transform text-slate-300 hover:text-slate-200"
           >
             <FaLinkedin size={24} />
+          </a>
+          <a 
+            href="https://twitter.com/SaitejaThadisetty" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:scale-125 transition-transform text-slate-300 hover:text-slate-200"
+          >
+            <FaTwitter size={24} />
           </a>
         </div>
       </div>
