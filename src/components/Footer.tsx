@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
             <FaLinkedin size={24} />
           </a>
           <a 
-            href="https://twitter.com/SaitejaThadisetty" 
+            href="https://x.com/Saiteja2706" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="hover:scale-125 transition-transform text-slate-300 hover:text-slate-200"
