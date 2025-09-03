@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
             className="transition-transform duration-200"
           >
             <a 
-              href="https://drive.google.com/file/d/17OJ2RQcduSzGAVrmP5HVyCbSDVNgGTYj/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1kJNNNqRVfWRrC4fSio753QYbRoysLO9B/view?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 text-white px-4 py-1.5 rounded-full hover:shadow-lg transition-shadow duration-300"
