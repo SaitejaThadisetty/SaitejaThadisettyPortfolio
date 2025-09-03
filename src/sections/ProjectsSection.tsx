@@ -6,6 +6,30 @@ import { FiExternalLink, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const projects = [
   {
+    name: 'Reflect.ai',
+    desc: 'Full-stack intelligent journaling app with real-time sentiment analysis using Google NLP API and data visualization dashboard.',
+    tech: ['Next.js', 'React.js', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Prisma', 'Google NLP API'],
+    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+    github: 'https://github.com/SaitejaThadisetty/reflect-ai',
+    // demo: '#',
+  },
+  {
+    name: 'Zenmo',
+    desc: 'Full-stack personal finance app to track subscriptions and prevent subscription bleed. Features AI-driven Subscription Health Score and optimization engine with dynamic spending visualization.',
+    tech: ['Next.js', 'React.js', 'Tailwind CSS', 'Zustand', 'Supabase', 'PostgreSQL', 'Prisma'],
+    img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
+    github: 'https://github.com/SaitejaThadisetty/Zenmo',
+    // demo: '#',
+  },
+  {
+    name: 'Financial Data Filtering App',
+    desc: 'A responsive web app that displays, filters, and sorts financial data for Apple Inc. using the Financial Modeling Prep API. Features dark/light modes, date and value filters, and sorting options for key financial metrics.',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Financial Modeling Prep API'],
+    img: 'https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg',
+    github: 'https://github.com/SaitejaThadisetty/Financial-Data-Filtering-Application',
+    demo: 'https://financial-data-filtering-application.vercel.app/',
+  },
+  {
     name: 'AeroReserve',
     desc: 'Airline reservation system using Spring Boot + Thymeleaf + MySQL. REST APIs, user auth, validation.',
     tech: ['Spring Boot', 'Thymeleaf', 'MySQL'],
@@ -47,14 +71,6 @@ const projects = [
     demo: 'https://saiteja-thadisetty-portfolio.vercel.app/',
   },
 
-  {
-    name: 'Financial Data Filtering App',
-    desc: 'A responsive web app that displays, filters, and sorts financial data for Apple Inc. using the Financial Modeling Prep API. Features dark/light modes, date and value filters, and sorting options for key financial metrics.',
-    tech: ['React', 'Vite', 'Tailwind CSS', 'Financial Modeling Prep API'],
-    img: 'https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg',
-    github: 'https://github.com/SaitejaThadisetty/Financial-Data-Filtering-Application',
-    demo: 'https://financial-data-filtering-application.vercel.app/',
-  },
   
 ];
 
