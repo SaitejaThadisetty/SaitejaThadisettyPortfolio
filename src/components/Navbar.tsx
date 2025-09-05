@@ -60,12 +60,17 @@ const Navbar: React.FC = () => {
           {navLinks.map((link) => (
             <motion.li
               key={link.name}
-              whileHover={{ scale: 1.1, color: '#94a3b8' }}
-              className="transition-colors duration-200"
+              className="relative group"
             >
-              <a href={link.href} className="text-slate-200 hover:text-slate-300 transition-colors duration-200">
+              <motion.a 
+                href={link.href} 
+                className="text-slate-200 hover:text-slate-300 transition-colors duration-200 relative z-10 block"
+                whileHover={{ scale: 1.1, color: '#94a3b8' }}
+              >
                 {link.name}
-              </a>
+              </motion.a>
+              {/* Animated underline */}
+              <div className="absolute bottom-0 left-1/2 h-0.5 bg-slate-200 transform -translate-x-1/2 w-0 group-hover:w-full transition-all duration-300 ease-out" />
             </motion.li>
           ))}
           <motion.li
