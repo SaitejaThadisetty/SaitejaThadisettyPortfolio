@@ -11,7 +11,7 @@ const projects = [
     tech: ['Next.js', 'React.js', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Prisma', 'Google NLP API'],
     img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
     github: 'https://github.com/SaitejaThadisetty/reflect-ai',
-    // demo: '#',
+    demo: 'https://reflect-ai-seven.vercel.app/',
   },
   {
     name: 'Zenmo',
