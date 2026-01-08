@@ -63,7 +63,7 @@ const ContactSection: React.FC = () => {
         
         <button 
           type="submit" 
-          className="bg-gradient-to-r from-slate-600 to-slate-700 text-white py-2 rounded font-semibold hover:scale-105 transition-transform flex justify-center items-center"
+          className="bg-gradient-to-r from-slate-600 to-slate-700 text-white py-2 rounded font-semibold hover:scale-105 transition-transform flex justify-center items-center cursor-pointer"
           disabled={formStatus === 'submitting'}
         >
           {formStatus === 'submitting' ? 'Sending...' : 'Send'}
